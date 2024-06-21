@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br><br><br><br><br><br>
+<body>
+    <form action="/hasil2" method="post">
+        <div style="display: flex; flex-wrap: wrap;">
+            <div style="flex: 1;">
+                {% for i, (pertanyaan, gejala) in enumerate(pertanyaan_list) %}
+                    {% if i % 2 == 0 %}
+                        <p>{{ pertanyaan }}</p>
+                        <input type="radio" id="ya{{ i }}" name="jawaban{{ i }}" value="ya">
+                        <label for="ya{{ i }}">Ya</label><br>
+                        <input type="radio" id="tidak{{ i }}" name="jawaban{{ i }}" value="tidak">
+                        <label for="tidak{{ i }}">Tidak</label><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div style="flex: 1;">
+                {% for i, (pertanyaan, gejala) in enumerate(pertanyaan_list) %}
+                    {% if i % 2 != 0 %}
+                        <p>{{ pertanyaan }}</p>
+                        <input type="radio" id="ya{{ i }}" name="jawaban{{ i }}" value="ya">
+                        <label for="ya{{ i }}">Ya</label><br>
+                        <input type="radio" id="tidak{{ i }}" name="jawaban{{ i }}" value="tidak">
+                        <label for="tidak{{ i }}">Tidak</label><br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Submit" style="background-color: rgb(0, 189, 252); padding: 10px 20px; font-size: 16px;">
+        </div>
+        <br>
+    </form>
+</body>
+{% endblock %}

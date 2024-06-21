@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br><br><br><br>
+<div style="width: 80%; margin: 0 auto;">
+    <form action="{{ url_for('hasil') }}" method="post">
+        <div style="column-count: 2;">
+            {% for i, (pertanyaan, gejala) in enumerate(pertanyaan_list) %}
+            <div style="margin-bottom: 20px;">
+                <p>Pertanyaan {{ i+1 }}: {{ pertanyaan }}</p>
+                <select name="jawaban{{ i }}" required>
+                    <option value="">Pilih tingkat keyakinan</option>
+                    <option value="kurang yakin">Kurang Yakin</option>
+                    <option value="yakin">Yakin</option>
+                    <option value="sangat yakin">Sangat Yakin</option>
+                    <option value="super yakin">Super Yakin</option>
+                </select>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <input type="submit" value="Submit" style="font-size: 20px; padding: 10px 20px; background-color: #0099ff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        </div>
+    </form>
+</div>
+<br>
+{% endblock %}

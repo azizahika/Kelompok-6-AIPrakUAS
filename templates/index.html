@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+
+{% block title %}MindfulChildCare{% endblock %}
+
+{% block content %}
+<div class="loader loader-bg">
+  <div class="loader-inner ball-clip-rotate-pulse">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<!-- Top Navigation -->
+<nav class="navbar navbar-toggleable-md mb-4 top-bar navbar-static-top sps sps--abv">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse1" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">MindfulChild<span>Care</span></a>
+        <div class="collapse navbar-collapse" id="navbarCollapse1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"> <a class="nav-link" href="#myCarousel">Home <span class="sr-only">(current)</span></a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#benefits">Benefits</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#blog">Features</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Swiper Slider -->
+<div class="swiper-container main-slider" id="myCarousel">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide slider-bg-position" style="background-image: url('{{ url_for('static', filename='img/1.jpg') }}');" data-hash="slide1">
+            <h2>Kenali sedari diri gejala kesehatan mental anak anda</h2> 
+        </div>
+        <div class="swiper-slide slider-bg-position" style="background-image: url('{{ url_for('static', filename='img/3.jpg') }}');" data-hash="slide2">
+            <h2>Cek dan kenali lebih jauh sebelum terlambat</h2>
+        </div>
+    </div>
+</div>
+ 
+
+<!-- About -->
+<section class="about-sec parallax-section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2><small>Who We Are</small>About<br>Our Blog</h2>
+            </div>
+            <div class="col-md-4">
+                <p>Selamat datang di halaman pengecekan kesehatan mental anak. Tujuan dari pengecekan ini adalah untuk membantu orang tua dan pengasuh dalam mengidentifikasi dan memahami kondisi kesehatan mental anak-anak mereka.</p>
+                <p>Melalui serangkaian pertanyaan yang telah dirancang khusus, kami berharap dapat memberikan gambaran awal mengenai kesehatan mental anak Anda dan memberikan rekomendasi langkah-langkah yang tepat untuk mendukung kesejahteraan mereka.</p>
+            </div>
+            <div class="col-md-4">
+                <p>Pengecekan ini bukanlah diagnosis medis, namun alat bantu untuk mengenali tanda-tanda awal gangguan mental yang mungkin ada pada anak Anda.</p>
+                <p>Dengan demikian, Anda dapat mengambil tindakan lebih awal dan mencegah perkembangan masalah yang lebih serius.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits -->
+<section class="service-sec" id="benefits">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="heading text-md-center text-xs-center">
+                    <h2><small>Benefits of Exercise</small>Pentingnya Kesehatan Mental bagi Anak-Anak</h2>
+                    <p>Kesehatan mental adalah bagian penting dari kesehatan secara keseluruhan, terutama bagi anak-anak yang sedang dalam masa perkembangan. Anak-anak dengan kesehatan mental yang baik cenderung memiliki perkembangan emosional dan sosial yang positif, mampu belajar dan berinteraksi dengan baik, serta memiliki kesejahteraan yang optimal. Beberapa alasan pentingnya menjaga kesehatan mental anak-anak antara lain:</p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 text-sm-center service-block">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        <h3>Perkembangan Emosional</h3>
+                        <p>Anak-anak yang sehat secara mental dapat mengelola emosi mereka dengan baik, memahami perasaan mereka sendiri, dan mengekspresikan emosi secara sehat.</p>
+                    </div>
+                    <div class="col-md-6 text-sm-center service-block">
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        <h3>Interaksi Sosial</h3>
+                        <p>Kesehatan mental yang baik memungkinkan anak-anak untuk membangun hubungan yang positif dengan teman sebaya, keluarga, dan lingkungan sekitarnya.</p>
+                    </div>
+                    <div class="col-md-6 text-sm-center service-block">
+                        <i class="fa fa-leaf" aria-hidden="true"></i>
+                        <h3>Prestasi Akademis</h3>
+                        <p>Anak-anak yang stabil secara emosional cenderung memiliki performa akademis yang lebih baik karena mereka mampu berkonsentrasi dan memanfaatkan potensi belajar mereka secara maksimal.</p>
+                    </div>
+                    <div class="col-md-6 text-sm-center service-block">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                        <h3>Kesejahteraan Umum</h3>
+                        <p>Kesehatan mental yang baik mendukung kesejahteraan fisik, emosional, dan psikologis anak secara keseluruhan, menciptakan dasar yang kuat untuk masa depan yang sehat dan bahagia.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ url_for('static', filename='img/side-01.jpg') }}" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog -->
+<section class="blog-sec text-center" id="blog">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="heading">
+                    <h2><small>Get to know</small>Our Features</h2>
+                </div>
+            </div>
+            <div class="col-md-4 blog-box">
+                <div class="blog-image-block"> 
+                    <img src="{{ url_for('static', filename='img/blog-01.jpg') }}" class="img-fluid" />
+                </div>
+                <h3 class="blog-title"><small></small><a href="{{ url_for('pertanyaan_dasar') }}">Pemeriksaan Dasar</a></h3>
+                <p class="blog-content">Pertanyaan umum untuk mengidentifikasi apakah anak memiliki gangguan mental.</p>
+            </div>
+            <div class="col-md-4 blog-box">
+                <div class="blog-image-block"> 
+                    <img src="{{ url_for('static', filename='img/blog-02.jpg') }}" alt="" class="img-fluid"> 
+                </div>
+                <h3 class="blog-title"><small></small><a href="{{ url_for('pemeriksaan_lanjutan') }}">Pemeriksaan Lanjutan</a></h3>
+                <p class="blog-content">Pemeriksaan yang lebih mendalam menggunakan 30 pertanyaan yang lebih spesifik.</p>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-sec" id="contact">
+    <div class="container">
+      <h2>Get in Touch <small>Our work is the presentation of our capabilities.</small> </h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleName">Name</label>
+            <input type="text" class="form-control" id="exampleName" aria-describedby="emailHelp">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="examplePhone">Phone Number</label>
+            <input type="text" class="form-control" id="examplePhone" aria-describedby="emailHelp">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> </div>
+        </div>
+        <div class="col-md-12">
+          <label for="exampleTextarea">Enter your Message</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        </div>
+        <div class="col-md-12 text-xs-center action-block"> <a href="#" class="btn btn-capsul btn-aqua">Submit</a> </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
